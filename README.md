@@ -5,7 +5,13 @@ Project: 12/22/20
 README: 12/29/20
 
 ## Description
-A python program to explore the functionality of pandas and numpy, specifically when analyzing and displaying statistics for CSV files.
+A python program to explore the functionality of python and packages such as numpy and pandas, specifically when analyzing and displaying statistics for CSV files.
+
+## Dependencies/Versions
+Numpy = 1.19.2
+Pandas = 0.22.0
+
+*If you are having issues with the script working, it could be that your packages are a different version.*
 
 ## Files used
 chicago.csv, washington.csv, new_york_city.csv
