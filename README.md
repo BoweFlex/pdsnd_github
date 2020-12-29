@@ -1,15 +1,15 @@
-### Date created
-Include the date you created this project and README file.
+### Bikeshare
 
-### Project Title
-Replace the Project Title
+### Date created
+Project: 12/22/20
+README: 12/29/20
 
 ### Description
-Describe what your project is about and what it does
+A python program to explore the functionality of pandas and numpy, specifically when analyzing and displaying statistics for CSV files.
 
 ### Files used
-Include the files used
+chicago.csv, washington.csv, new_york_city.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
+https://stackoverflow.com, https://pandas.pydata.org, https://www.w3schools.com were used in addition to Udacity information.
