@@ -10,6 +10,7 @@ A python program to explore the functionality of python and packages such as num
 ## Dependencies/Versions
 Numpy = 1.19.2
 Pandas = 0.22.0
+Tabulate = 0.8.7
 
 *If you are having issues with the script working, it could be that your packages are a different version.*
 
@@ -17,7 +18,8 @@ Pandas = 0.22.0
 chicago.csv, washington.csv, new_york_city.csv
 
 ## Usage and Installation
-Use pip or conda to install pandas and numpy. Contact me for the csv files. Run the program with python 3.
+Use pip or conda to install pandas, numpy (pandas depends on this so it's normally installed as a prereq), and tabulate. 
+Contact me for the csv files. Run the program with python 3.
 
 ## Credits
 
