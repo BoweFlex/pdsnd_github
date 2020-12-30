@@ -111,9 +111,9 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     
-    
-
     df = pd.read_csv(CITY_DATA.get(city), parse_dates=['Start Time'])
+    """ parse_dates arg is used to change Start Time col
+    to a Date Time object rather than a string object, so it can be used for time comparisons """
     month_num = month_switcher(month)
     day_num = day_switcher(day)
     if month_num < 7:
@@ -147,7 +147,13 @@ def time_stats(df):
     start_time = time.time()
 
     try:
-    # display the most common month 
+    # display the most common month
+    """
+    Takes month values from Start Time, counts unique values and makes a new
+    data frame from those counts, then takes first row from frame for display.
+    Same system used for pretty much all stats.
+    Exception handling catches any missing columns for differences in CSV files.
+    """
         most_common_month_df = df['Start Time'].dt.month.value_counts().to_frame()
         most_common_month_name = month_switcher(most_common_month_df.index[0])
         month_count = most_common_month_df.loc[most_common_month_df.index[0]]['Start Time']
