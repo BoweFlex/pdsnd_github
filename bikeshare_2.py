@@ -2,6 +2,7 @@ import time
 import sys
 import pandas as pd
 import numpy as np
+from tabulate import tabulate
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -134,7 +135,7 @@ def preview_data(df):
     while preview == "yes": # continues previewing as long as they enter yes a second time
         start = stop # sets start equal to current stop, for first iteration this does not change the value
         stop += 5 # increases the top end for range by 5, both of these could be done at end of loop but this way there's no needless incrementing
-        print(df.iloc[range(start, stop)])
+        print(tabulate(df.iloc[range(start, stop)], headers="keys"))
         preview = input("Would you like to see 5 more rows of data? (yes or no): ").lower()
     
     print('-'*40)
@@ -148,12 +149,12 @@ def time_stats(df):
 
     try:
     # display the most common month
-    """
-    Takes month values from Start Time, counts unique values and makes a new
-    data frame from those counts, then takes first row from frame for display.
-    Same system used for pretty much all stats.
-    Exception handling catches any missing columns for differences in CSV files.
-    """
+        """
+            Takes month values from Start Time, counts unique values and makes a new
+            data frame from those counts, then takes first row from frame for display.
+            Same system used for pretty much all stats.
+            Exception handling catches any missing columns for differences in CSV files.
+        """
         most_common_month_df = df['Start Time'].dt.month.value_counts().to_frame()
         most_common_month_name = month_switcher(most_common_month_df.index[0])
         month_count = most_common_month_df.loc[most_common_month_df.index[0]]['Start Time']
